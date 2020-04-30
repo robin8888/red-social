@@ -1,0 +1,38 @@
+main .contenedorfotoperfil {
+    background-color: rgb(255, 255, 255);
+    width: 300px;
+    padding: 10px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+main .contenedorfotoperfil img {
+    padding: 10px;
+    width: 100%;
+}
+
+main .subirfotoperfil {
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+main .subirfotoperfil form input {
+    width: 55%;
+    padding: 5px;
+    color: rgb(239, 241, 241)
+}
+
+main .subirfotoperfil form .btn {
+    margin-right: 5px;
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+main .datos {
+    margin-left: 16px;
+}
+
+main .datos a {
+    padding: 3px;
+}

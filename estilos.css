@@ -1,0 +1,641 @@
+.body {
+    background-color: rgb(239, 241, 241);
+    /* background-color: rgb(20, 20, 20); */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.imagencabecero {
+    width: 20px;
+}
+
+.imagenlogo {
+    width: 200px;
+    margin-left: 0;
+    padding-bottom: 20px;
+    padding-left: 0;
+}
+
+.sombra {
+    box-shadow: 2px 3px 20px rgba(0, 0, 0, 548);
+}
+
+.imagenpublicacion {
+    width: 60px;
+}
+
+.imageneslatiz {
+    width: 20px;
+}
+
+.iconospublicacion {
+    width: 20px;
+}
+
+.imgpubliprincipal {
+    width: 250px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    background-color: rgb(241, 239, 239);
+    padding: 10px 0;
+    margin: 0px;
+}
+
+
+/* barra de buscar */
+
+header .buscador form .busca1 {
+    width: 100%;
+    border: none;
+    font-size: 12px;
+    padding: 0 10px;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 3px 0 0 3px;
+}
+
+header .buscador form button {
+    width: 100%;
+    border: none;
+    font-size: 12px;
+    padding: 0 10px;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 3px 0 0 3px;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+}
+
+header .buscador form button:hover {
+    background-color: rgb(241, 239, 239);
+}
+
+header .menu {
+    padding: 0;
+}
+
+.imagenperfilcabecero {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 100px;
+}
+
+
+/* main */
+
+main {
+    padding: 20px;
+}
+
+
+/* contenedor izquierdo */
+
+main .contenedorizq {
+    padding-bottom: 10px;
+    padding-left: 0px;
+}
+
+main .contenedorizq nav {
+    border-bottom: 1px;
+    padding-bottom: 20px;
+}
+
+main .contenedorizq nav a {
+    display: block;
+    padding: 3px;
+}
+
+main .contenedorizq nav a img {
+    margin-right: 10px;
+}
+
+main .contenedorizq nav a:hover {
+    text-decoration: none;
+}
+
+main .contenedorizq nav a span {
+    color: rgb(39, 39, 39);
+    text-decoration: none;
+}
+
+
+/* contenido principal */
+
+.contsubepensamiento {
+    width: 445px;
+    text-align: right;
+    margin-top: 10px;
+}
+
+#subepensamiento {
+    height: 30px;
+    width: 40px;
+    align-self: auto;
+    border-top: 0Px;
+    border-bottom: 0px;
+    border-right: 0px;
+    border-left: 0px;
+}
+
+#subepensamiento img {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+main .contenedorprincipal .publicacion {
+    margin-bottom: 20px;
+}
+
+main .contenedorprincipal .publicacion .imagenpublicacion {
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+}
+
+main .contenedorprincipal .publicacion .imagenpublicacion a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 100px;
+    margin-top: 20px;
+}
+
+main .contenedorprincipal .publicacion form textarea {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100px;
+    max-height: 300px;
+    padding: 15px;
+    font-size: 16px;
+    border: 0px;
+    box-shadow: 2px 3px 20px rgba(0, 0, 0, 548);
+}
+
+main .contenedorprincipal .publicacion form .contenedorbotones {
+    padding: 20px 0px;
+    border-bottom: 1px solid #c7c8ca;
+}
+
+main .contenedorprincipal .publicacion form .contenedorbotones a {
+    margin-right: 10px;
+}
+
+main .contenedorprincipal .publicacion form button {
+    border: 1px solid rgb(255, 5, 5);
+    padding: 5px 30px;
+    font-size: 14px;
+    font-family: sans-serif;
+    /* background: linear-gradient(to botton, ) */
+}
+
+
+/* publicaciones */
+
+main .publicaciones {
+    margin-bottom: 40px;
+}
+
+main .publicaciones .foto a {
+    display: inline-block;
+    border-radius: 100px;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+}
+
+main .publicaciones .foto img {
+    width: 100%;
+}
+
+main .publicaciones .nombre {
+    font-family: sans-serif;
+    line-height: 16px;
+    font-size: 16px;
+    color: rgb(255, 5, 5);
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+main .publicaciones .texto {
+    padding: 15px;
+    font-size: 16px;
+    color: rgb(15, 15, 15);
+    margin-bottom: 15px;
+    background: rgb(255, 255, 255);
+    box-shadow: 2px 3px 20px rgba(0, 0, 0, 548);
+}
+
+
+/* .texto1 { 
+    padding: 15px;
+    font-size: 16px;
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 548);
+     transition: 1s; 
+    transform: scale(1.0);
+    border-radius: 3px 0 0 3px;
+    background: rgb(255, 255, 255);
+}*/
+
+main .publicaciones .imagen {
+    padding: 15px;
+    margin-bottom: 15px;
+    background: rgb(255, 255, 255);
+    width: 400px;
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 548);
+}
+
+main .publicaciones .imagen img {
+    width: 100%;
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 548);
+    transition: 1s;
+    border-radius: 1px solid black;
+}
+
+main .publicaciones .imagen img:hover {
+    transform: scale(1.5);
+}
+
+main .publicaciones .post .caja-botones {
+    margin-bottom: 15px;
+}
+
+main .publicaciones .post .caja-botones button {
+    cursor: pointer;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 3px;
+    border: none;
+    background-color: rgb(239, 241, 241);
+}
+
+main .publicaciones .post .caja-botones p {
+    margin-bottom: 0;
+    color: rgb(58, 57, 57);
+    margin-top: 2px;
+}
+
+main .publicaciones .post .comentariofoto {
+    width: 400px;
+    border: none;
+    margin-bottom: 0px;
+}
+
+main .publicaciones .comentario {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #cbcbcb;
+}
+
+main .comentariospublicaciones .foto {
+    padding-left: 0px;
+    margin-right: 15px;
+    width: 40px;
+    height: 40px;
+}
+
+main .comentariospublicaciones .foto a {
+    width: 30px;
+    height: 30px;
+}
+
+main .comentariospublicaciones form textarea {
+    width: 100%;
+    border: 1px solid #cbcbcb;
+    padding: 8px;
+    min-height: 40px;
+    height: 40px;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+
+/* datos que aparecen en pagina de perfil */
+
+.datos {
+    padding-top: 20px;
+}
+
+.row .contenedorfotoperfil {
+    width: 500px;
+}
+
+.row .fotodeperfil {
+    width: 100%;
+    height: 400px;
+    box-shadow: 2px 3px 20px rgba(0, 0, 0, 548);
+    /* transition: 1s; */
+    padding-left: 15px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-right: 15px;
+}
+
+
+/*.fotodeperfil:hover {
+    transform: scale(1.5);
+}*/
+
+main .row .contenedorfotoperfil .contbtnperfil {
+    width: 100%;
+}
+
+main .row .contenedorfotoperfil .subirfotoperfil {
+    border-radius: 1px;
+}
+
+main .row .contenedorfotoperfil .subirfotoperfil .btnsub .btn {
+    width: 130px;
+}
+
+main .row .contenedorfotoperfil .subirfotoperfil textarea {
+    border: none;
+}
+
+#divalida {
+    display: flex;
+    position: relative;
+    text-align: center;
+    padding: 2px;
+    width: 130px;
+    height: 35px;
+    margin-top: 5px;
+    background-color: rgb(255, 5, 5);
+    color: white;
+    border-radius: 2px;
+}
+
+#valida {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+#elige {
+    text-align: center;
+    padding: 5px;
+    background-color: red;
+    width: 130px;
+    cursor: pointer;
+}
+
+
+/* barraderecha */
+
+
+/*.barraderecha {
+    position: sticky;
+    top: 80px;
+     left: 70%; 
+}*/
+
+main .barraderecha h3 {
+    font-size: 16px;
+    text-align: center;
+}
+
+main .barraderecha .amigos a {
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+main .barraderecha .amigos a img {
+    width: 100%;
+}
+
+main footer {
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+main footer a {
+    line-height: 14px;
+    color: #1176b6;
+    margin-right: 16px;
+}
+
+main footer p {
+    color: rgb(98, 97, 97);
+    margin-top: 10px;
+}
+
+main .contenedorizq .subirfotoperfil {
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+main .post form .agregaramigo {
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+}
+
+main .post form .agregaramigo img {
+    border: none;
+}
+
+main .publicaciones .botonperfilotro {
+    border: none;
+}
+
+
+/* numero de solicitudes de amistad en el cabecero de paginas */
+
+.container nav .totalsolicitud {
+    color: white;
+    margin-left: 2px;
+    padding-left: 2px;
+    font-size: 18px;
+    border-radius: 100%;
+    background-color: green;
+    padding-top: 1px;
+    padding-right: 1px;
+    padding-left: 1px;
+    padding-bottom: 1px;
+}
+
+
+/* numero de chats se muestra en lateral izquierdo */
+
+main .contenedorizq nav a .totalchat {
+    color: rgb(255, 255, 255);
+    margin-left: 2px;
+    padding-left: 2px;
+    font-size: 18px;
+    border-radius: 100%;
+    background-color: green;
+    padding-top: 1px;
+    padding-right: 1px;
+    padding-left: 1px;
+    padding-bottom: 1px;
+}
+
+main .publicaciones .texto1 {
+    padding: 15px;
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 548);
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 0px;
+    background: rgb(255, 255, 255);
+    border-radius: 3px 3px 3px 3px;
+    /* background: rgb(255, 255, 255); */
+    width: 400px;
+}
+
+.sticky-top3 {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: 1030;
+}
+
+#mensaje {
+    width: 445px;
+    border: rgb(107, 105, 105);
+    font-size: 16px;
+    padding: 0 10px;
+    height: 50px;
+    line-height: 25px;
+    border-radius: 3px 0 0 3px;
+}
+
+
+/* chat */
+
+#enviarchat {
+    width: 50px;
+    border: none;
+    font-size: 12px;
+    padding: 0 px;
+    height: 50px;
+    line-height: 25px;
+    border-radius: 3px 0 0 3px;
+    cursor: pointer;
+    background-color: rgb(252, 251, 251);
+}
+
+.btnborrachat {
+    width: 32px;
+    border: none;
+    padding: 0 px;
+    height: 30px;
+    line-height: 25px;
+    border-radius: 3px 0 0 3px;
+    cursor: pointer;
+    margin-left: 0px;
+    text-align: left;
+    margin-right: 0px;
+}
+
+footer {
+    background-color: rgb(239, 241, 241);
+    margin-top: 20px;
+}
+
+footer .footer {
+    margin-bottom: 30px;
+    border: 1px solid rgb(252, 5, 5);
+    align-self: auto;
+    width: 500px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 3px 20px rgba(0, 0, 0, 548);
+}
+
+#imagencajachat {
+    width: 40px;
+    border: none;
+    font-size: 12px;
+    padding: 0 px;
+    height: 40px;
+    line-height: 25px;
+    border-radius: 3px 0 0 3px;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    margin-right: 0px;
+}
+
+.mensachat {
+    box-shadow: 2px 3px 20px rgba(0, 0, 0, 548);
+}
+
+.imagenamigochat {
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+}
+
+.textochat {
+    padding: 15px;
+    font-size: 16px;
+    color: rgb(15, 15, 15);
+    margin-bottom: 15px;
+    background: rgb(255, 255, 255);
+}
+
+.sticky-top4 {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 300px;
+    z-index: 1030;
+}
+
+.publicacioneschat {
+    border: 1px solid rgb(221, 218, 218);
+}
+
+.imgamigochat {
+    width: 40px;
+    border: none;
+    font-size: 12px;
+    padding: 0 px;
+    height: 40px;
+    line-height: 25px;
+    border-radius: 100%;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    margin-right: 0px;
+}
+
+.hola {
+    height: 50px;
+}
+
+#frm .h {
+    color: white;
+    border-color: white;
+    border-top: white;
+    width: 0px;
+    height: 0px;
+}
+
+
+/* boton stop de publicaciones */
+
+main .publicaciones .post .caja-botones .btns {
+    cursor: pointer;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 3px;
+    border: none;
+    margin-left: 0px;
+    background-color: rgb(239, 241, 241);
+}
+
+main .publicaciones .post .caja-botones .numerost {
+    margin-right: 0px;
+    margin-top: 10px;
+    padding-right: 0px;
+}
