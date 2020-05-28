@@ -1,15 +1,14 @@
 <!-- subir fotos de publicaciones a base de datos -->
-      <?php
+<?php
       session_start();
 
       require "conexion.php";
 
-
 $_POST['descripcion'];
-$nombreimagen= $_FILES['imagen']['name'];
-$archivo=$_FILES['imagen']['tmp_name'];
-$url='imagenes/';
-$ruta=$url . $nombreimagen;
+$nombrevideo=$_FILES['video']['name'];
+$archivo=$_FILES['video']['tmp_name'];
+$url='videos/';
+$ruta=$url . $nombrevideo;
 move_uploaded_file($archivo,$ruta);
 
     $nombre=$_SESSION['usuario'];
@@ -19,14 +18,17 @@ move_uploaded_file($archivo,$ruta);
     $id=$_SESSION['id'];
     $texto=$_POST['descripcion'];
    if (!empty($ruta)) {
-       $consulta2="INSERT INTO publicaciones (nombre,publicacionfoto,comentariopubli,email,usu_id)VALUES ('$nombre','$ruta','$texto','$email','$id') ";
+       
+       $consulta2="INSERT INTO videos (nombre,video,comentariovideo,usu_id,likes)VALUES('$nombre','$ruta','$texto','$id','0')";
        $resultado2=mysqli_query($con, $consulta2);
+       if ($resultado2) {
+           header("location:videos.php");
 
-       header("location:principal.php");
+       }else echo" no se ha subido video";
    }else{
   $consultab="INSERT INTO publicaciones (nombre,comentariopubli,email,usu_id)VALUES ('$nombre','$texto','$email','$id') ";
     $resultadob=mysqli_query($con, $consultab);
-    echo"texto guardado";
+    
     header("location:principal.php");
     }
 $con->close();

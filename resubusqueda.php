@@ -35,7 +35,7 @@ foreach ($resultado as $resu4) {
             <div class="col-auto d-none d-md-block logo">
             <a href=""><img class="imagenlogo" src="imagenes_pro/red.png" alt=""></a>
             </div>
-          <div class="col-6 col-sm-8 col-lg-6 order-1 buscador mb-2">
+          <div class="col-5 col-sm-5 col-lg-5 order-1 buscador mb-2">
             <form>
                 <div class="row no-gutters">
                  <div class="col -10">
@@ -47,11 +47,11 @@ foreach ($resultado as $resu4) {
                 </div>
             </form>
           </div>
-            <nav class=" col-4 col-sm-3 col-lg-2 order-2 d-flex justify-content-between ml-auto mr-5 mb-2 menu">
-             <a href="solicitudes.php"><img class= "imagencabecero" src="imagenes_pro/mensajes1.png"></a>
-             <a href="principal.php"><img class= "imagencabecero" src="imagenes_pro/home1.png"></a>
-             <a href="amigos.php"><img class= "imagencabecero" src="imagenes_pro/amigos1.png"></a>
-             <a href="perfil.php"><img class= "imagenperfilcabecero" src="data:image/jpg; base64 ,<?php echo base64_encode($resu4['avatar'])?>"></a>
+            <nav class=" col-5 col-sm-3 col-lg-3 order-2 d-flex justify-content-between ml-auto mr-5 mb-2 menu">
+             <a href="solicitudes.php"><img class= "imagencabecero" src="imagenes_pro/mensaje3.png"></a>
+             <a href="principal.php"><img class= "imagencabecero" src="imagenes_pro/home4.png"></a>
+             <a href="amigos.php"><img class= "imagencabecero" src="imagenes_pro/amigos2.png"></a>
+             <a href="perfil.php"><img class= "imagenperfilcabecero" src="<?php echo ($resu4['avatar'])?>"></a>
             </nav>
             </div>
          </div>
@@ -59,19 +59,33 @@ foreach ($resultado as $resu4) {
     <main class="container">
         <div class="row">
         <!-- contenedor izquierdo -->
-            <div class="col-md-3 contenedorizq">
+            <div class="col-sm-2 md-2  d-lg-block contenedorizq" id="contizqui">
                  <nav>
-                    <a href=""> <img class="imageneslatiz"src="imagenes_pro/fotos.png" alt=""> <span>imagenes</span>  </a>
-                    <a href=""> <img class="imageneslatiz"src="imagenes_pro/video.png" alt=""> <span>videos</span></a>
-                    <a href="chat.php"> <img class="imageneslatiz"src="imagenes_pro/chat1.png" alt=""> <span>Chat</span></a>
-                    <a href="cerrarsesion.php"> <img class="imageneslatiz"src="imagenes_pro/cerrar.png" alt=""> <span>cerrar sesion</span> </a>
+                    <a href="misimagenes.php"> <img class="imageneslatiz"src="imagenes_pro/fotos2.png" alt=""> <span>imagenes</span>  </a>
+                    <a href="videos.php"> <img class="imageneslatiz"src="imagenes_pro/video2.png" alt=""> <span>videos</span></a>
+                    <a href="chat.php"> <img class="imageneslatiz"src="imagenes_pro/chat2.png" alt=""> <span>Chat</span></a>
+                    <a href="cerrarsesion.php"> <img class="imageneslatiz"src="imagenes_pro/cerrar2.png" alt=""> <span>cerrar sesion</span> </a>
                 </nav>
             </div>
+            <!-- contenedor espacio izquierdo -->
+            <div class="col-sm-2 md-2 d-none d-lg-block"></div>
             <!-- contenedor medio -->
+            <!-- fondo a derecha de menu exo -->
+            <a href="#" class="fondo-enlace d-md-none" id="fondo-enlace"></a>
 
-            <div class=" container col">
-                <h3> Resultado de busqueda</h3><br>
+            <div class=" container medio col-5">
+                <h3> Resultado de busqueda</h3><hr><br>
+                 <!-- menu expandible -->
+                    <div class="row">
+                        <div class="col-12">
+                            <a href="#" class="btn-menu d-md-none d-flex justify-content-between" id="btn-menu">
+                                <span>Menu</span>
+                                <img  class="imageneslatiz"src="imagenes_pro/menu.png" alt=""></a>
+                        </div>
+                    </div>
+                    <!-- arriba cierre de menu expandible -->
                 <div class="row">
+                    
 
 
 <?php
@@ -92,7 +106,7 @@ if (isset($_POST['buscadorprincipal'])) {
     <div class="publicaciones">
                        <div class="row">
                             <div class="col-auto foto">
-                                <a href=""> <img class="" src="data:image/jpg; base64 ,<?php echo base64_encode($row6['avatar'])?>" alt=""> </a>
+                                <a href=""> <img class="" src="<?php echo ($row6['avatar'])?>" alt=""> </a>
                             </div>
                             <div class="col post">
                                 <form action="agregaramigo.php" method="POST">
@@ -112,6 +126,9 @@ if (isset($_POST['buscadorprincipal'])) {
 
                 </div>
             </div>
+            <!-- contenedor espacio derecha -->
+            <div class="col-sm-3 md-3 d-none d-lg-block">
+            </div>
             <!-- contenedor derecho publiciddad -->
            <?php
             require "publicidad.php";
@@ -120,16 +137,15 @@ if (isset($_POST['buscadorprincipal'])) {
         </div>
     </main>
 
-
-   <script src="js/menu.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+ <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+        <script src="js/menu.js"></script>
+        <script src="js/likes2.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+     
 </body>
 </html>
-    <script src="js/menu.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    </body>
-</html>
+    

@@ -10,13 +10,16 @@ if (isset($imagen)) {
 }else {
     echo"todo mal";
 }*/
-
-$imagen=addslashes(file_get_contents($_FILES['imagen']['tmp_name'])) ;
-if (!empty($imagen)) {
+$nombreimagen= $_FILES['imagen']['name'];
+$archivo=$_FILES['imagen']['tmp_name'];
+$url='imagenes/';
+$ruta=$url . $nombreimagen;
+move_uploaded_file($archivo,$ruta);
+if (!empty($ruta)) {
 $nombre=$_SESSION['usuario'];
 $email=$_SESSION['correo'];
 
-$consulta2="UPDATE  registros SET avatar ='$imagen' WHERE email = '$email' ";
+$consulta2="UPDATE  registros SET avatar ='$ruta' WHERE email = '$email' ";
 $resultado2=mysqli_query($con, $consulta2);
 
 header("location:perfil.php");

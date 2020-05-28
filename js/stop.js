@@ -21,7 +21,7 @@ $(document).ready(function() {
 
                 $("#stop_" + id).html(stops);
                 if (stops == 2) {
-                    $('#' + id).attr('src', 'imagenes_pro/bloqueado.png')
+                    $('#' + id).attr('src', 'imagenes_pro/stop4.png')
                     $('#tex_' + id).html("PUBLICACION  BLOQUEADA")
                 }
 

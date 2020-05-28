@@ -39,7 +39,7 @@ foreach ($resultado as $resu4) {
             <div class="col-auto d-none d-md-block logo">
             <a href=""><img class="imagenlogo" src="imagenes_pro/red.png" alt=""></a>
             </div>
-          <div class="col-6 col-sm-8 col-lg-6 order-1 buscador mb-2">
+          <div class="col-5 col-sm-5 col-lg-5 order-1 buscador mb-2">
             <form>
                 <div class="row no-gutters">
                  <div class="col -10">
@@ -51,11 +51,11 @@ foreach ($resultado as $resu4) {
                 </div>
             </form>
           </div>
-            <nav class=" col-4 col-sm-3 col-lg-2 order-2 d-flex justify-content-between ml-auto mr-5 mb-2 menu">
-             <a href=""><img class= "imagencabecero" src="imagenes_pro/mensajes1.png"></a>
-             <a href="principal.php"><img class= "imagencabecero" src="imagenes_pro/home1.png"></a>
-             <a href="amigos.php"><img class= "imagencabecero" src="imagenes_pro/amigos1.png"></a>
-             <a href="perfil.php"><img class= "imagenperfilcabecero" src="data:image/jpg; base64 ,<?php echo base64_encode($resu4['avatar'])?>"></a>
+            <nav class=" col-5 col-sm-3 col-lg-3 order-2 d-flex justify-content-between ml-auto mr-5 mb-2 menu">
+             <a href=""><img class= "imagencabecero" src="imagenes_pro/mensaje3.png"></a>
+             <a href="principal.php"><img class= "imagencabecero" src="imagenes_pro/home4.png"></a>
+             <a href="amigos.php"><img class= "imagencabecero" src="imagenes_pro/amigos2.png"></a>
+             <a href="perfil.php"><img class= "imagenperfilcabecero" src="<?php echo ($resu4['avatar'])?>"></a>
 
             </nav>
             </div>
@@ -64,24 +64,34 @@ foreach ($resultado as $resu4) {
     <main class="container">
         <div class="row">
         <!-- contenedor izquierdo -->
-            <div class="col-md-3 contenedorizq">
+            <div class="col-sm-2 md-2  d-lg-block contenedorizq"id="contizqui">
                  <nav>
-                    <a href=""> <img class="imageneslatiz"src="imagenes_pro/fotos.png" alt=""> <span>imagenes</span>  </a>
-                    <a href=""> <img class="imageneslatiz"src="imagenes_pro/video.png" alt=""> <span>videos</span></a>
-                    <a href="chat.php"> <img class="imageneslatiz"src="imagenes_pro/chat1.png" alt=""><span>Chat</span>  <span style="color:white" class="totalchat">   <?php echo $resuchat?></span></a>
-                    <a href="cerrarsesion.php"> <img class="imageneslatiz"src="imagenes_pro/cerrar.png" alt=""> <span>cerrar sesion</span> </a>
+                    <a href="misimagenes.php"> <img class="imageneslatiz"src="imagenes_pro/fotos2.png" alt=""> <span>imagenes</span>  </a>
+                    <a href=""> <img class="imageneslatiz"src="imagenes_pro/video2.png" alt=""> <span>videos</span></a>
+                    <a href="chat.php"> <img class="imageneslatiz"src="imagenes_pro/chat2.png" alt=""><span>Chat</span>  <span  class="totalchat">   <?php echo $resuchat?></span></a>
+                    <a href="cerrarsesion.php"> <img class="imageneslatiz"src="imagenes_pro/cerrar2.png" alt=""> <span>cerrar sesion</span> </a>
                 </nav>
             </div>
+            <!-- fondo a derecha de menu exo -->
+            <a href="#" class="fondo-enlace d-md-none" id="fondo-enlace"></a>
+            <!-- contenedor espacio izquierdo -->
+            <div class="col-sm-2 md-2 d-none d-lg-block"></div>
             <!-- contenedor medio -->
 
-            <div class=" container col">
+            <div class="container medio col-6">
+                <h3>Solicitudes de amistad </h3><hr><br>
+                 <!-- menu expandible -->
+                    <div class="row">
+                        <div class="col-12">
+                            <a href="#" class="btn-menu d-md-none d-flex justify-content-between" id="btn-menu">
+                                <span>Menu</span>
+                                <img  class="imageneslatiz"src="imagenes_pro/menu.png" alt=""></a>
+                        </div>
+                    </div>
                 <div class="row">
-                    <h3> Solicitudes de amistad </h3><br>
-
+                   
 
 <?php
-
-
 
         $consul11="SELECT * FROM amigos WHERE idpara = '".$_SESSION['id']. "' AND estado=0";
         $resu11=mysqli_query($con, $consul11);
@@ -94,7 +104,7 @@ foreach ($resultado as $resu4) {
                        <div class="row">
                             <div class="col-auto foto" >
 
-                            <a  href=""> <img class=""src="data:image/jpg; base64 ,<?php echo base64_encode($row11['avatar'])?>" alt=""> </a>
+                            <a  href=""> <img class=""src="<?php echo($row11['avatar'])?>" alt=""> </a>
 
                             </div>
                             <div class="col post">
@@ -135,7 +145,11 @@ foreach ($resultado as $resu4) {
 
                 </div>
             </div>
+            <!-- contenedor espacio derecho -->
+            <div class="col-sm-3 md-3 d-none d-lg-block">
+            </div> 
             <!-- contenedor derecho -->
+
            <?php
             require "publicidad.php";
            ?>

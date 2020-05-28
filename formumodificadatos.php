@@ -17,7 +17,7 @@
 
 <div class="row  justify-content-center">
 <div class="col-  margen">
-     <div class ="container">
+    <div class ="container formu sombra">
     <div class= "logos">
     <img src="imagenes_pro/red.png" alt="imagen">
     <h3> Actualice datos </h3>

@@ -43,7 +43,7 @@ foreach ($resultado as $resu4) {
             <div class="col-auto d-none d-md-block logo">
             <a href=""><img class="imagenlogo" src="imagenes_pro/red.png" alt=""></a>
             </div>
-          <div class="col-6 col-sm-8 col-lg-6 order-1 buscador mb-2">
+          <div class="col-5 col-sm-5 col-lg-5 order-1 buscador mb-2">
             <form>
                 <div class="row no-gutters">
                  <div class="col -10">
@@ -55,11 +55,11 @@ foreach ($resultado as $resu4) {
                 </div>
             </form>
           </div>
-            <nav class=" col-4 col-sm-3 col-lg-2 order-2 d-flex justify-content-between ml-auto mr-5 mb-2 menu">
-             <a href="solicitudes.php"><span class="totalsolicitud"><?php echo $numero?></span>  <img class= "imagencabecero" src="imagenes_pro/mensajes1.png"></a>
-             <a href="principal.php"><img class= "imagencabecero" src="imagenes_pro/home1.png"></a>
-             <a href="amigos.php"><img class= "imagencabecero" src="imagenes_pro/amigos1.png"></a>
-             <a href="perfil.php"><img class= "imagenperfilcabecero" src="data:image/jpg; base64 ,<?php echo base64_encode($resu4['avatar'])?>"></a>
+            <nav class=" col-5 col-sm-5 col-lg-3 order-2 d-flex justify-content-between ml-auto mr-5 mb-2 menu">
+             <a href="solicitudes.php"><span class="totalsolicitud"><?php echo $numero?></span>  <img class= "imagencabecero" src="imagenes_pro/mensaje3.png"></a>
+             <a href="principal.php"><img class= "imagencabecero" src="imagenes_pro/home4.png"></a>
+             <a href="amigos.php"><img class= "imagencabecero" src="imagenes_pro/amigos2.png"></a>
+             <a href="perfil.php"><img class= "imagenperfilcabecero" src="<?php echo ($resu4['avatar'])?>"></a>
 
             </nav>
             </div>
@@ -70,20 +70,37 @@ foreach ($resultado as $resu4) {
     <main class="container">
         <div class="row">
         <!-- contenedor izquierdo -->
-            <div class="col-md-3 contenedorizq">
+            <div class="col-sm-2 md-3  d-lg-block contenedorizq"id="contizqui">
                  <nav>
-                    <a href=""> <img class="imageneslatiz"src="imagenes_pro/fotos.png" alt=""> <span>imagenes</span>  </a>
-                    <a href=""> <img class="imageneslatiz"src="imagenes_pro/video.png" alt=""> <span>videos</span></a>
-                    <a href="chat.php"> <img class="imageneslatiz"src="imagenes_pro/chat1.png" alt=""><span>Chat</span>  <span style="color:white" class="totalchat">   <?php echo $resuchat?></span></a>
-                    <a href="cerrarsesion.php"> <img class="imageneslatiz"src="imagenes_pro/cerrar.png" alt=""> <span>cerrar sesion</span> </a>
+                    <a href="misimagenes.php"> <img class="imageneslatiz"src="imagenes_pro/fotos2.png" alt=""> <span>imagenes</span>  </a>
+                    <a href="videos.php"> <img class="imageneslatiz"src="imagenes_pro/video2.png" alt=""> <span>videos</span></a>
+                    <a href="chat.php"> <img class="imageneslatiz"src="imagenes_pro/chat2.png" alt=""><span>Chat</span>  <span  class="totalchat">   <?php echo $resuchat?></span></a>
+                    <a href="cerrarsesion.php"> <img class="imageneslatiz"src="imagenes_pro/cerrar2.png" alt=""> <span>cerrar sesion</span> </a>
                 </nav>
+            </div>
+            <!-- fondo a derecha de menu exo -->
+            <a href="#" class="fondo-enlace d-md-none" id="fondo-enlace"></a>
+            <!-- contenedor espacio izquierdo -->
+            
+            <div class="col-sm-2 md-3 d-none d-lg-block">
+ 
             </div>
             <!-- contenedor medio -->
 
-            <div class=" container col">
-                <h3> Mis Amigos </h3><br><br>
-                <div class="row">
+            <div class=" container medio col-5">
+               <h3> Mis Amigos </h3><hr>
+               <br><br>
+               <!-- menu expandible -->
+                    <div class="row">
+                        <div class="col">
+                            <a href="#" class="btn-menu d-md-none d-flex justify-content-between" id="btn-menu">
+                                <span>Menu</span>
+                                <img  class="imageneslatiz"src="imagenes_pro/menu.png" alt=""></a>
+                        </div>
+                    </div>
 
+                <div class="row">
+                    
 
 <?php
 
@@ -100,21 +117,13 @@ $resu9=mysqli_query($con, $consul9);
                        <div class="row">
                             <div class="col-auto foto" >
                                 <form action="perfilotro.php" method ="POST">
-
-                               <button class="botonperfilotro" type="submit"><a  href=""> <img class=""src="data:image/jpg; base64 ,<?php echo base64_encode($row10['avatar'])?>" alt=""> </a></button>
-
+                               <button class="botonperfilotro" type="submit"><a  href=""> <img class=""src="<?php echo ($row10['avatar'])?>" alt=""> </a></button>
                             </div>
                         <div class="col post">
-
                                 <a class="nombre"href=""><?php  echo $row10['Nombre']?></a>
-                                <p  class="texto "><?php  echo $row10['publicacioncomentario']?></p> 
+                                <p  class="texto"><?php  echo $row10['publicacioncomentario']?></p> 
                                 <input type="hidden" name="ver" value="<?php echo $row10['id_usu']?>">
-
-
                                 </form>
-
-
-
                             </div>
                         </div>
                  </div><br>
@@ -129,22 +138,17 @@ $resu9=mysqli_query($con, $consul9);
                        <div class="row">
                             <div class="col-auto foto" >
                                 <form action="perfilotro.php" method ="POST">
-
-                               <button class="botonperfilotro" type="submit"><a  href=""> <img class=""src="data:image/jpg; base64 ,<?php echo base64_encode($row26['avatar'])?>" alt=""> </a></button>
-
+                               <button class="botonperfilotro" type="submit"><a  href=""> <img class=""src="<?php echo ($row26['avatar'])?>" alt=""> </a></button>
                             </div>
                         <div class="col post">
 
                                 <a class="nombre"href=""><?php  echo $row26['Nombre']?></a>
                                 <p class="texto"><?php  echo $row26['publicacioncomentario']?></p>
-                                <input type="hidden" name="ver" value="<?php echo $row10['id_usu']?>">
+                                <input type="hidden" name="ver" value="<?php echo $row26['id_usu']?>">
 
+                                 </form>
 
-                                </form>
-
-
-
-                            </div>
+                 </div>
                         </div>
                  </div>
 
@@ -156,6 +160,9 @@ $resu9=mysqli_query($con, $consul9);
 ?>
             </div>
     </div><br>
+    <!-- contenedor espacio derecho -->
+     <div class="col-sm-3 md-3 d-none d-lg-block"> 
+         </div> 
 
             <!-- contenedor derecho -->
 <?php
@@ -166,9 +173,12 @@ $resu9=mysqli_query($con, $consul9);
     </main>
 
 
-   <script src="js/menu.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+  <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+        <script src="js/menu.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
 </body>
 </html>

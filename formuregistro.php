@@ -17,12 +17,11 @@ session_start();
 <div  class="row  justify-content-center ">
 
 <div class= "margen">
-    <div class="container">
+    <div class="container formu sombra">
     <div class= "logos">
     <img src="imagenes_pro/red.png" alt="imagen">
     <h3>Registro</h3>
     </div>
-
 
     <form method ="post" action="formuregistro.php">
  <div class ="form-group">
@@ -47,14 +46,14 @@ session_start();
 <div class ="form-group ">
     <input id="btn2" class="btn btn-outline-danger mx-5"type="submit" name="enviar" value="Confirmar Registro"><a href="formumodificadatos.php">Actualizar</a>
 </div>
-</div>
+
 
      <?php
 
 require "conexion.php";
 
 if ( !empty($_POST['correo']) && !empty($_POST['contrasena']) && !empty($_POST['repetir']) && !empty($_POST['nombre']) && !empty($_POST['pais']) && !empty($_POST['ciudad'])) {
-     $email=$_POST['correo'];
+     $email=$_POST['correo']&& !empty($_POST['publicacioncomentario'])&& !empty($_POST['avatar']);
     $contrasena=md5($_POST['contrasena']);
     $confirma=md5($_POST['repetir']);
     $nombre=$_POST['nombre'];
@@ -64,8 +63,10 @@ if ( !empty($_POST['correo']) && !empty($_POST['contrasena']) && !empty($_POST['
     $_SESSION['ciudad']=$ciudad;
     $_SESSION['nombre']=$nombre;
     $_SESSION['correo']=$email;
+    $imagendefect="imagenes/avatar1.png";
+    $publicdefect="!..Que bien ya estoy en redder...¡";
 //insertar datos en tabla registros
-    $insertar="INSERT INTO registros(email,Clave,CClave,Nombre,Pais,Ciudad)VALUES('$email','$contrasena','$confirma','$nombre','$pais','$ciudad')";
+    $insertar ="INSERT INTO registros (email,Clave,CClave,Nombre,Pais,Ciudad,avatar,publicacioncomentario)VALUES('$email','$contrasena','$confirma','$nombre','$pais','$ciudad','$imagendefect','$publicdefect')";
     $resultado=mysqli_query($con, $insertar);
     if (!$resultado) {
         echo"<div><h6>
@@ -86,6 +87,7 @@ if ( !empty($_POST['correo']) && !empty($_POST['contrasena']) && !empty($_POST['
 
    $con->close();
 ?>
+</div>
 </div>
     </div>
 

@@ -8,9 +8,9 @@
         
     </head>
     <body>
-      <div class="col-3 ">
-                        <h3>Tus Amigos</h3>
-                        <h5 style="color:green">selecciona un amigo para iniciar el chat</h5><br><br>
+      <div class="contenedoramigoschat col-3"style="overflow-y:scroll; width: 50%; height:40%">
+                        <h3 style="color:white">Tus Amigos</h3><hr>
+                        <h5 style="color:white">selecciona un amigo para iniciar el chat</h5><br><br>
 
 <?php
         $consul9="SELECT * FROM amigos WHERE estado=1 AND idpara = '".$_SESSION['id']."' OR ide = '".$_SESSION['id']."'";
@@ -21,14 +21,14 @@
                     $row10=$query->fetch_array(); ?>
     <div class="publicaciones">
                        <div class="row">
-                            <div class="col-auto  " >
+                            <div class="col-auto" >
 
-                            <img class="imgamigochat" id="<?php echo $row10['id_usu']?>"src="data:image/jpg; base64 ,<?php echo base64_encode($row10['avatar'])?>" alt="">
+                            <img class="imagenamigochat" id="<?php echo $row10['id_usu']?>"src="<?php echo($row10['avatar'])?>" alt="">
                             </div>
                         <div class="col post">
-                                <p class=""<?php echo $row10['id_usu']?>" style="color:red"><?php  echo $row10['Nombre']?></p>
+                                <p class="m<?php echo $row10['id_usu']?>"style="color:white" ><?php  echo $row10['Nombre']?></p>
                                 <input type="hidden"id=""value="<?php echo $row10['id_usu']?>"class="ab" name="ver" >
-
+                                <hr style="background:white">
                             </div>
                         </div>
                  </div>
@@ -40,11 +40,11 @@
                      <div class="publicaciones">
                        <div class="row">
                             <div class="col-auto " >
-                            <img class="imgamigochat" id="<?php echo $row26['id_usu']?>"value=""src="data:image/jpg; base64 ,<?php echo base64_encode($row26['avatar'])?>" alt="">
+                            <img class="imagenamigochat" id="<?php echo $row26['id_usu']?>"value=""src="<?php echo ($row26['avatar'])?>" alt="">
                             </div>
                         <div class="col post">
-                               <p class="m<?php echo $row26['id_usu']?>"  style="color:red"><?php  echo $row26['Nombre']?></p>
-                                <input type="hidden"id="ab" name="ver"class="" value="<?php echo $row26['id_usu']?>">
+                               <p class="m<?php echo $row26['id_usu']?>"style="color:white" ><?php  echo $row26['Nombre']?></p>
+                                <input type="hidden"id="ab" name="ver"class="" value="<?php echo $row26['id_usu']?>"><hr style="background:white">
                             </div>
                         </div>
                  </div>

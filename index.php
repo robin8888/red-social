@@ -1,4 +1,7 @@
 <!-- formulario de acceso a red  -->
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -9,37 +12,34 @@
         <link href="css/formularios.css" rel="stylesheet">
        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
-    <body class="body" >
+    <body class="body"> 
 <div class="row justify-content-center ">
 
 <div class="col- sm-2 lg-4  margen ">
-    <div class="container">
+    <div class="container formu sombra">
     <div class= "logos">
-    <img src="imagenes_pro/red.png" alt="imagen">
+    <img  src="imagenes_pro/red.png" alt="imagen">
     </div>
     <form action="index.php" method="post">
     <div class="form-group">
-    <label for="usuario">Usuario</label>
-    <input id= "" type="text" name="usuario" value=""class="form-control" >
+    <input id= "" type="text" name="usuario" value=""class="form-control" placeholder="Usuario" >
     </div>
     <div class="form-group">
-     <label for="">Contraseña</label>
-    <input id="c" type="password" name="clave" value=""class="form-control" ><br>
-     </div>
+    <input id="c" type="password" name="clave" value=""class="form-control"placeholder="Contraseña" >
+    </div>
     <div class="form-group">
-     <label for="">email</label>
-    <input id="c" type="email" name="correo" value=""class="form-control" ><br>
-
-
+    <input id="c" type="email" name="correo" value=""class="form-control" placeholder="email" >
     </div>
     <div class="form-group py-10">
     <button  id="btn1"type="submit" class="btn btn-outline-danger px-5 mx-5">Acceder</button> <a href="formuregistro.php">Registrate</a>
+    </div>
+    </form>
  <?php
-session_start();
+
 
 require "conexion.php";
 
-if (!empty($_POST['usuario']) && !empty($_POST['clave'])&& !empty($_POST['correo'])) {
+    if (!empty($_POST['usuario']) && !empty($_POST['clave'])&& !empty($_POST['correo'])) {
      $usuario=$_POST['usuario'];
      $correo=$_POST['correo'];
      $clave = md5($_POST['clave']);
@@ -57,14 +57,14 @@ if (!empty($_POST['usuario']) && !empty($_POST['clave'])&& !empty($_POST['correo
     $consulta1="SELECT 'Nombre' , 'Clave', 'email','Pais','Ciudad' FROM registros WHERE Nombre='$usuario' AND Clave='$clave' AND email='$correo' ";
     $resultado1=mysqli_query($con, $consulta1);
 
-    if (mysqli_num_rows($resultado1) > 0) {
+    if (mysqli_num_rows($resultado1) > 0 && isset($_SESSION['id'])) {
 
         header("location:principal.php");
     } else {
      echo"<div class='infomal'>
    ! Si no estas registrado  por favor Registrate
 </div>";
-echo"";
+include_once "index.php";
 
  }
 } else {
@@ -77,8 +77,7 @@ echo"";
   $con->close();
 ?>
 
-    </div>
-    </form>
+    
     </div>
     </div>
     </div>

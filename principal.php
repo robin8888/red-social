@@ -1,7 +1,7 @@
 <?php
-
 require "conexion.php";
 require "consultas.php";
+if (isset($_SESSION['id'])) {
 
 //numero de solicitudes de amistad
 $consul11="SELECT * FROM amigos WHERE idpara = '".$_SESSION['id']. "' AND estado=0";
@@ -19,6 +19,9 @@ $consultat="SELECT publicacioncomentario FROM registros WHERE id_usu='".$_SESSIO
       foreach ($resultadot as $resut) {
           $resut['publicacioncomentario'];
       }
+    }else {
+        header("location:index.php");
+    }     
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,7 +42,7 @@ $consultat="SELECT publicacioncomentario FROM registros WHERE id_usu='".$_SESSIO
     <div class="col-auto d-none d-md-block logo">
     <a href=""><img class="imagenlogo" src="imagenes_pro/red.png" alt=""></a>
     </div>
-    <div class="col-6 col-sm-8 col-lg-6 order-1 buscador mb-2">
+    <div class="col-5 col-sm-5 col-lg-5  buscador">
     <form action="resubusqueda.php" method="POST">
         <div class="row no-gutters">
         <div class="col -10">
@@ -49,13 +52,14 @@ $consultat="SELECT publicacioncomentario FROM registros WHERE id_usu='".$_SESSIO
         <button type="submit"><img src="imagenes_pro/buscador.png" alt=""> </button>
         </div>
         </div>
+        
     </form>
     </div>
-    <nav class=" col-4 col-sm-3 col-lg-2 order-2 d-flex justify-content-between ml-auto mr-5 mb-2 menu">
-    <a href="solicitudes.php"><span class="totalsolicitud"><?php echo $numero?></span>  <img class= "imagencabecero" src="imagenes_pro/mensajes1.png"></a>
-    <a href="principal.php"><img class= "imagencabecero" src="imagenes_pro/home1.png"></a>
-    <a href="amigos.php"><img class= "imagencabecero" src="imagenes_pro/amigos1.png"></a>
-    <a href="perfil.php"><img class= "imgamigochat" src="data:image/jpg; base64 ,<?php echo base64_encode($resu['avatar'])?>"></a>
+    <nav class=" col-5 col-sm-5 col-lg-3  d-flex justify-content-between ml-auto mr-5  menu">
+    <a href="solicitudes.php"><span class="totalsolicitud"><?php echo $numero?></span>  <img class= "imagencabecero" src="imagenes_pro/mensaje3.png"></a>
+    <a href="principal.php"><img class= "imagencabecero" src="imagenes_pro/home4.png"></a>
+    <a href="amigos.php"><img class= "imagencabecero" src="imagenes_pro/amigos2.png"></a>
+    <a href="perfil.php"><img class= "imagenperfilcabecero" src="<?php echo ($resu['avatar'])?>"></a>
 
     </nav>
     </div>
@@ -66,40 +70,50 @@ $consultat="SELECT publicacioncomentario FROM registros WHERE id_usu='".$_SESSIO
 
     <main class="container">
         <div class="row">
+
             <!-- contenedor izquierdo -->
-            <div class="col-md-3 contenedorizq ">
+            <div class="col-sm-2 md-3  d-lg-block contenedorizq" id="contizqui">
                 <nav>
-                    <a href=""> <img class="imageneslatiz"src="imagenes_pro/fotos.png" alt=""> <span>imagenes</span>  </a>
-                    <a href=""> <img class="imageneslatiz"src="imagenes_pro/video.png" alt=""> <span>videos</span></a>
-                    <a href="chat.php"> <img class="imageneslatiz"src="imagenes_pro/chat1.png" alt=""><span>Chat  </span>  <span style="color:white" class="totalchat">   <?php echo $resuchat?></span></a>
-                    <a href="cerrarsesion.php"> <img class="imageneslatiz"src="imagenes_pro/cerrar.png" alt=""> <span>cerrar sesion</span> </a>
-
+                    <a href="misimagenes.php"> <img class="imageneslatiz"src="imagenes_pro/fotos2.png" alt=""> <span>imagenes</span></a>
+                    <a href="videos.php"> <img class="imageneslatiz"src="imagenes_pro/video2.png" alt=""> <span>videos</span></a>
+                    <a href="chat.php"> <img class="imageneslatiz"src="imagenes_pro/chat2.png" alt=""><span>Chat  </span>  <span  class="totalchat">   <?php echo $resuchat?></span></a>
+                    <a href="cerrarsesion.php"> <img class="imageneslatiz"src="imagenes_pro/cerrar2.png" alt=""> <span>cerrar sesion</span> </a>
                 </nav>
-
             </div>
+            <!-- contenedor espacio izquierdo -->
+              <div class="col-sm-2 md-2  d-lg-block"></div> 
+              <!-- fondo a derecha de menu exo -->
+            <a href="#" class="fondo-enlace d-md-none" id="fondo-enlace"></a>
             <!-- contenedor de publicaciones -->
-                <div class="col contenedorprincipal">
-
+                <div class="col-md-6 medio contenedorprincipal">
                  <!-- comienzo de que estoy pensando -->
-
                 <div class="publicacion">
+                    <!-- menu expandible -->
+                    <div class="row">
+                        <div class="col">
+                            <a href="#" class="btn-menu d-md-none d-flex justify-content-between" id="btn-menu">
+                                <span>Menu</span>
+                                <img  class="imageneslatiz"src="imagenes_pro/menu.png" alt=""></a>
+                        </div>
+                    </div>
+                    <!-- arriba cierre de menu expandible -->
                     <div class="row">
                                 <div class="col-auto foto">
-                                    <a href=""> <img class="imagenpublicacion"  src="data:image/jpg; base64 ,<?php echo base64_encode($resu['avatar'])?>" alt=""> </a>
+                                    <a href=""> <img class="imagenpublicacion"  src="<?php echo ($resu['avatar'])?>" alt=""> </a>
                                 </div>
                         <div class="col">
                             <form action="subirpubli.php" enctype="multipart/form-data" method ="post">
-                                    <textarea id="pienso" name="descripcion" placeholder="¿que estoy pensando hoy?"></textarea>
+                                    <textarea id="" name="descripcion" placeholder="¿que estoy pensando hoy?"></textarea>
                                     <div class="contenedorbotones d-flex justify-content-between">
                                             <div class="media">
                                                 <div id="divalida">
                                                    <p class=""ide="elige">+ Imagen</p>
-                                                    <input  name="imagen"type="file" class="" id="valida"  placeholder="elige foto">
+                                                    <input  name="imagen" type="file" class="" id="valida"  placeholder="">
                                                 </div>
 
                                             </div>
                                             <div>
-                                            <button class="btn btn-outline-danger mx-10 " type="submit">Publicar</button>
+                                            <button class="btn btn-outline-danger mx-10" type="submit">Publicar</button>
                                             </div>
                                     </div>
                             </form>
@@ -112,14 +126,11 @@ $consultat="SELECT publicacioncomentario FROM registros WHERE id_usu='".$_SESSIO
                         <!-- publicacion de comentario que pienso -->
                         <div class="row">
                             <div class="col-auto foto">
-                                <a href=""> <img class="" src="data:image/jpg; base64 ,<?php echo base64_encode($resu['avatar'])?>" alt=""> </a>
+                                <a href=""> <img class="" src="<?php echo ($resu['avatar'])?>" alt=""> </a>
                             </div>
                             <div class="col post">
                                 <a class="nombre"href=""><?php  echo $_SESSION['usuario']?></a>
-                                <p class=" texto" id="textopensamiento"><?php  echo $resut['publicacioncomentario']?></p>
-
-
-
+                                <p class="texto" id="textopensamiento"><?php  echo $resut['publicacioncomentario']?></p>
                             </div>
                         </div>
 
@@ -133,7 +144,7 @@ $consultat="SELECT publicacioncomentario FROM registros WHERE id_usu='".$_SESSIO
                                         </div>
                                         <div class="col">
                                             <form id="formu">
-                                                <textarea id="pienso"class="sombra" name ="pienso"rows="" cols="" placeholder="p..ejem.. ! pienso luego existo...¡"></textarea>
+                                                <textarea id="pienso"class="" name ="pienso"rows="" cols="" placeholder="p..ejem.. ! pienso luego existo...¡"></textarea>
                                                 <div class="row">
                                                     <div class="contsubepensamiento">
                                                         <button id="subepensamiento" type="submit"><img src="imagenes_pro/aceptar.png" alt=""></button>
@@ -181,17 +192,19 @@ require "conexion.php";
          ?>
                         <div class="row ">
                             <div class="col-auto foto ">
-                                <a href=""> <img class="" src="data:image/jpg; base64 ,<?php echo base64_encode($fila4['avatar'])?>" alt=""> </a>
+                                <a href=""> <img class="" src="<?php echo($fila4['avatar'])?>" alt=""> </a>
                             </div>
                             <div class="col post">
                                 <a class="nombre"href=""><?php echo $fila4['Nombre']?></a>
                                 <p><?php echo $fila4['Ciudad']."-".$fila4['Pais']?></p>
                                 <p><?php echo $fila['fechapublicacion']?></p>
-                                <p id="tex_<?php echo($fila['id'])?>"class= texto1 ><?php echo $fila['comentariopubli']?></p>
-                                <div class="imagen ">
-                                    <img  id='<?php echo($fila['id'])?>' class="imgpublic" src="data:image/jpg; base64 ,<?php echo base64_encode( $fila['publicacionfoto'])?>" alt="">
+                                    <div class="imagen">
+                                    <div class="texto1" >
+                                    <p id="tex_<?php echo($fila['id'])?>"  ><?php echo $fila['comentariopubli']?></p>
                                 </div>
-                                <div class=" caja-botones d-flex justify-content-between aling-items-center">
+                                    <img  id='<?php echo($fila['id'])?>' class="imgpublic" src="<?php echo( $fila['publicacionfoto'])?>" alt="">
+                                </div>
+                                <div class="caja-botones d-flex justify-content-between aling-items-center">
                                     <!-- boton megusta -->
                                     <button  class="btnm" id="<?php echo($fila['id'])?>" type=""> <img class="iconospublicacion " src="imagenes_pro/megusta1.png" alt=""> </button>
                                     <!-- boton compartir -->
@@ -203,7 +216,8 @@ require "conexion.php";
                                     <button class="btns" id="<?php echo($fila['id'])?>"type=""><img class="iconospublicacion" src="imagenes_pro/parar.png" alt=""></button>
                                     </div>
                                     <!-- numero de likes -->
-                                   <p id="like_<?php echo($fila['id'])?>"> <?php echo($fila['likes'])?>  <img class="iconospublicacion"src="imagenes_pro/megusta2.png" alt=""></p>
+                                        <p class="my-2" id="like_<?php echo($fila['id'])?>"> <?php echo($fila['likes'])?><img class="iconospublicacion"src="imagenes_pro/megusta2.png" alt=""></p>
+
                                 </div>
 
                             </div>
@@ -213,7 +227,7 @@ require "conexion.php";
                                 <div class="comentariospublicaciones">
                                     <div class="row no-gutters comentario">
                                         <div class="col-auto foto">
-                                            <a href=""><img src="data:image/jpg; base64 ,<?php echo base64_encode($resu['avatar'])?>" alt=""></a>
+                                            <a href=""><img src="<?php echo ($resu['avatar'])?>" alt=""></a>
 
                                         </div>
                                         <div class="col">
@@ -241,33 +255,21 @@ require "conexion.php";
             <!-- cierre de contenedor de publicaciones -->
 
                 <!-- contenedor derecho -->
+                
                <?php
                require "publicidad.php";
                ?>
             </div>
     </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
          <script
         src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
         crossorigin="anonymous"></script>
-
+        <script src="js/menu.js"></script>
         <script src="js/stop.js"></script>
         <script src="js/likes2.js"></script>
         <script src="js/pensamiento.js"></script>
+        
         <!-- <script src="js/publicacionprincipal.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
