@@ -1,0 +1,1044 @@
+        .body {
+            background-color: rgb(239, 241, 241);
+            /* background-color: rgb(20, 20, 20); */
+            /* background-color: rgb(196, 235, 218); */
+            font-family: Arial, Helvetica, sans-serif;
+            /*background-image: url('../imagenes_pro/fondo2.jpg');
+            background-repeat: repeat-y;
+            background-size: 100%;
+            background-attachment: fixed;*/
+        }
+        
+        .imagencabecero {
+            width: 20px;
+        }
+        
+        .imagenlogo {
+            width: 200px;
+            margin-left: 0;
+            padding-bottom: 20px;
+            padding-left: 0;
+        }
+        
+        .sombra {
+            box-shadow: 2px 3px 20px rgba(0, 0, 0, 548);
+        }
+        
+        .imagenpublicacion {
+            width: 30px;
+        }
+        
+        .imageneslatiz {
+            width: 20px;
+        }
+        
+        .iconospublicacion {
+            width: 20px;
+        }
+        /*.imgpubliprincipal {
+    width: 250px;
+}*/
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        header {
+            /* background-color: rgb(241, 239, 239); */
+            /* background-color: rgb(32, 43, 92); */
+            background-image: url('../imagenes_pro/fondo.jpg');
+            background-repeat: repeat-y;
+            background-size: 100%;
+            background-attachment: fixed;
+            padding: 10px;
+            margin: 0px;
+            box-shadow: 2px 3px 20px rgba(0, 0, 0, 548);
+        }
+        /* barra de buscar */
+        
+        header .buscador form .busca1 {
+            width: 100%;
+            border: none;
+            font-size: 12px;
+            padding: 0 10px;
+            height: 25px;
+            line-height: 25px;
+            border-radius: 3px 0 0 3px;
+            margin-top: 10px;
+        }
+        
+        header .buscador form button {
+            width: 100%;
+            border: none;
+            font-size: 12px;
+            padding: 0 10px;
+            height: 25px;
+            line-height: 25px;
+            border-radius: 3px 0 0 3px;
+            cursor: pointer;
+            background-color: rgb(255, 255, 255);
+            margin-top: 10px;
+        }
+        
+        header .buscador form button img {
+            width: 18px;
+            padding: 2px;
+            align-self: auto;
+        }
+        
+        header .buscador form button:hover {
+            background-color: rgb(241, 239, 239);
+        }
+        
+        header .menu {
+            padding: 0;
+            height: 40px;
+        }
+        
+        .imagenperfilcabecero {
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            overflow: hidden;
+            border-radius: 100px;
+        }
+        /* main */
+        
+        main {
+            padding: 30px;
+        }
+        /* contenedor izquierdo */
+        
+        main .contenedorizq {
+            padding-bottom: 10px;
+            padding-left: 0px;
+            background-image: url('../imagenes_pro/fondo.jpg');
+            background-repeat: repeat-y;
+            background-size: 100%;
+            background-attachment: fixed;
+            border-radius: 20px;
+            /*border: solid red;*/
+            padding: 0px;
+            position: fixed;
+            left: 0px;
+            box-shadow: 2px 3px 20px rgba(0, 0, 0, 548);
+            margin-left: 50px;
+        }
+        
+        main .contenedorizq nav {
+            border-bottom: 1px;
+            padding-bottom: 20px;
+            /* background-color: rgb(183, 216, 231); */
+            background-image: url('../imagenes_pro/fondo.jpg');
+            background-repeat: repeat-y;
+            background-size: 100%;
+            background-attachment: fixed;
+            border-radius: 20px;
+            padding: 10px;
+        }
+        
+        main .contenedorizq nav a {
+            display: block;
+            padding: 5px;
+            margin-top: 2px;
+        }
+        
+        main .contenedorizq nav a img {
+            margin-right: 10px;
+            width: 30px;
+        }
+        
+        main .contenedorizq nav a:hover {
+            text-decoration: none;
+        }
+        
+        main .contenedorizq nav a span {
+            color: rgb(255, 253, 253);
+            text-decoration: none;
+        }
+        /* contenido principal */
+        
+        .contsubepensamiento {
+            width: 445px;
+            text-align: right;
+            margin-top: 10px;
+        }
+        
+        #subepensamiento {
+            height: 30px;
+            width: 40px;
+            align-self: auto;
+            border-top: 0Px;
+            border-bottom: 0px;
+            border-right: 0px;
+            border-left: 0px;
+            background-color: rgb(239, 241, 241);
+        }
+        
+        #subepensamiento img {
+            width: 100%;
+            padding: 0px;
+            margin: 0px;
+        }
+        /*main .medio {
+    margin-left: 250px;
+    width: 400px;
+}*/
+        /*main .contenedorprincipal {
+    margin-left: 250px;
+}*/
+        
+        h3 {
+            text-align: center;
+        }
+        
+        main .contenedorprincipal .publicacion {
+            margin-bottom: 20px;
+        }
+        
+        main .contenedorprincipal .publicacion .imagenpublicacion {
+            border-radius: 100%;
+            width: 40px;
+            height: 40px;
+        }
+        
+        main .contenedorprincipal .publicacion .imagenpublicacion a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            overflow: hidden;
+            border-radius: 100px;
+            margin-top: 20px;
+        }
+        
+        main .contenedorprincipal .publicacion form textarea {
+            width: 100%;
+            max-width: 100%;
+            min-height: 100px;
+            max-height: 300px;
+            padding: 15px;
+            font-size: 16px;
+            border: 0px;
+            /* box-shadow: 2px 3px 20px rgba(0, 0, 0, 548); */
+        }
+        
+        main .contenedorprincipal .publicacion form .contenedorbotones {
+            padding: 20px 0px;
+            border-bottom: 1px solid #c7c8ca;
+        }
+        
+        main .contenedorprincipal .publicacion form .contenedorbotones a {
+            margin-right: 10px;
+        }
+        
+        main .contenedorprincipal .publicacion form button {
+            border: 1px solid rgb(255, 5, 5);
+            padding: 5px 30px;
+            font-size: 14px;
+            font-family: sans-serif;
+            /* background: linear-gradient(to botton, ) */
+        }
+        /* publicaciones */
+        
+        main .publicaciones {
+            margin-bottom: 40px;
+            padding: 10px;
+        }
+        
+        main .publicaciones .foto a {
+            display: inline-block;
+            border-radius: 100px;
+            width: 40px;
+            height: 40px;
+            overflow: hidden;
+        }
+        
+        main .publicaciones .foto img {
+            width: 100%;
+        }
+        
+        main .publicaciones .nombre {
+            font-family: sans-serif;
+            line-height: 16px;
+            font-size: 16px;
+            color: rgb(255, 5, 5);
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        main .publicaciones .texto {
+            padding: 15px;
+            font-size: 16px;
+            color: rgb(2, 15, 59);
+            margin-bottom: 15px;
+            background: rgb(255, 255, 255);
+            border-radius: 20px 20px 20px 20px;
+            border: solid 1px rgb(114, 170, 196);
+            /* box-shadow: 2px 3px 20px rgba(0, 0, 0, 548); */
+        }
+        
+        main .publicaciones .texto1 {
+            padding: 10px;
+            /* box-shadow: 3px 5px 20px rgba(0, 0, 0, 548); */
+            font-size: 18px;
+            color: rgb(14, 13, 13);
+            margin-bottom: 0px;
+            background: rgb(254, 254, 255);
+            border-radius: 20px;
+            /* background: rgb(255, 255, 255); */
+            width: 100%;
+        }
+        
+        main .publicaciones .imagen {
+            padding: 15px;
+            margin-bottom: 15px;
+            background: rgb(255, 255, 255);
+            width: 100%;
+            /* box-shadow: 3px 5px 20px rgba(0, 0, 0, 548);*/
+            border-radius: 20px;
+        }
+        
+        main .publicaciones .imagen img {
+            width: 100%;
+            /* box-shadow: 3px 5px 20px rgba(0, 0, 0, 548); */
+            transition: 1s;
+            border-radius: 20px;
+        }
+        main .publicaciones  .videopublic {
+            width: 100%;
+            height:100%;
+        }
+        
+        main .publicaciones .imagen img:hover {
+            transform: scale(1.5);
+        }
+        
+        main .publicaciones .post .caja-botones {
+            margin-bottom: 15px;
+        }
+        /* botones de publicaciones */
+        
+        main .publicaciones .post .caja-botones button {
+            cursor: pointer;
+            padding: 10px 20px;
+            display: inline-block;
+            border-radius: 3px;
+            border: none;
+            margin-top: 5px;
+            /* background-color: rgb(239, 241, 241); */
+            background-color: transparent;
+        }
+        
+        main .publicaciones .post .caja-botones p {
+            margin-bottom: 0;
+            color: rgb(58, 57, 57);
+            margin-top: 2px;
+        }
+        
+        main .publicaciones .post .comentariofoto {
+            width: 400px;
+            border: none;
+            margin-bottom: 0px;
+        }
+        
+        main .publicaciones .comentario {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #cbcbcb;
+        }
+        
+        main .comentariospublicaciones .foto {
+            padding-left: 0px;
+            margin-right: 15px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        main .comentariospublicaciones .foto a {
+            width: 30px;
+            height: 30px;
+        }
+        
+        main .comentariospublicaciones form textarea {
+            width: 100%;
+            border: 1px solid #cbcbcb;
+            padding: 8px;
+            min-height: 40px;
+            height: 40px;
+            min-width: 100%;
+            max-width: 100%;
+        }
+        /* datos que aparecen en pagina de perfil */
+        
+        .datos {
+            padding-top: 20px;
+        }
+        
+        .row .contenedorfotoperfil {
+            width: 500px;
+            border-radius: 20px;
+            background-color: rgb(255, 255, 255);
+            border: solid 1px rgb(114, 182, 178);
+            padding: 20px;
+        }
+        
+        .row .fotodeperfil {
+            width: 100%;
+            height: 400px;
+            /* box-shadow: 2px 3px 20px rgba(0, 0, 0, 548); */
+            /* transition: 1s; */
+            padding-left: 15px;
+            padding-bottom: 15px;
+            padding-top: 15px;
+            padding-right: 15px;
+            border-radius: 20px;
+        }
+        /*.fotodeperfil:hover {
+    transform: scale(1.5);
+}*/
+        
+        main .row .contenedorfotoperfil .contbtnperfil {
+            /* width: 100%; */
+            padding: 10px;
+            align-self: center;
+            margin: 20px;
+        }
+        
+        main .row .contenedorfotoperfil .subirfotoperfil {
+            border-radius: 1px;
+        }
+        
+        main .row .contenedorfotoperfil .subirfotoperfil .btnsub .btn {
+            width: 130px;
+            height: 33px;
+            /*margin-left: 30px;*/
+            border-radius: 10px;
+            padding: 0;
+            margin-bottom: 3px;
+            margin-top: 0px;
+            background-image: url('../imagenes_pro/fondo.jpg');
+        }
+        
+        main .row .contenedorfotoperfil .subirfotoperfil textarea {
+            border: none;
+        }
+        
+        #divalida {
+            display: flex;
+            position: relative;
+            text-align: center;
+            justify-content: center;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            width: 120px;
+            height: 32px;
+            /* margin-top: 3px; */
+            /* background-color: rgb(255, 5, 5); */
+            /* background-color: rgb(32, 43, 92); */
+            background-image: url('../imagenes_pro/fondo.jpg');
+            color: white;
+            border-radius: 8px;
+        }
+        
+        #valida {
+            position: absolute;
+            top: 0px;
+            left: 10px;
+            right: 0px;
+            bottom: 0px;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+        
+        #elige {
+            text-align: center;
+            padding: 5px;
+            background-color: red;
+            width: 130px;
+            cursor: pointer;
+
+        }
+        body .barraderechavideo{
+            width: 400px;
+            height: 700px;
+        
+
+        }
+        body .barraderechavideo .videoperfil{
+            width: 100%;
+            height: 100%;
+           /* box-shadow: 2px 3px 20px rgba(0, 0, 0, 548);*/
+
+        }
+       
+        body .barraderechavideo {
+            position: fixed;
+            top: 80px;
+            left: 73%;
+            /*background-color: rgb(8, 8, 8);*/ 
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url('../imagenes_pro/fondo.jpg');
+            background-repeat: repeat-y;
+            background-size: 100%;
+            background-attachment: fixed;
+            border-radius: 10px;
+            box-shadow: 2px 3px 20px rgba(0, 0, 0, 548);
+            padding: 10px;
+            /*border: 2px solid white;*/
+            text-align: center;
+            
+        }
+        body .barraderechavideo ul {
+            width: 90%;
+            margin: auto;
+            list-style: none;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        
+        body .barraderechavideo ul li {
+            margin: 5px;
+            border:1px solid white;
+            border-radius: 20px;
+            padding: 10px;
+        }
+        
+        body .barraderechavideo span{
+            color: white;
+            align-self: center;
+        }
+        body .barraderechavideo h2 {
+            font-size: 16px;
+            text-align: center;
+            color: white;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+        #salirvideo{
+            display: none;
+
+        }
+        
+        
+        
+        .barraderecha {
+            position: fixed;
+            top: 80px;
+            left: 73%;
+            /* background-color: rgb(32, 43, 92); */
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url('../imagenes_pro/fondo.jpg');
+            background-repeat: repeat-y;
+            background-size: 100%;
+            background-attachment: fixed;
+            border-radius: 20px;
+            box-shadow: 2px 3px 20px rgba(0, 0, 0, 548);
+        }
+        
+        .barraderecha h2 {
+            font-size: 16px;
+            text-align: center;
+            color: white;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+        
+        .barraderecha .amigos a {
+            margin-bottom: 25px;
+            display: inline-block;
+            /* width: 100px; */
+            padding: 10px;
+            margin-top: 10px;
+        }
+        
+        .barraderecha a img {
+            width: 200px;
+            border-radius: 20px;
+            height: 150px;
+            padding: 10px;
+        }
+        
+        main footer {
+            font-family: sans-serif;
+            font-size: 14px;
+            color: white;
+            background-color: transparent;
+        }
+        
+        main footer a {
+            line-height: 14px;
+            color: #1176b6;
+            margin-right: 16px;
+            background-color: transparent;
+        }
+        
+        main footer p {
+            color: rgb(255, 253, 253);
+            margin-top: 10px;
+            background-color: transparent;
+        }
+        
+        main .contenedorizq .subirfotoperfil {
+            width: 300px;
+            margin-bottom: 20px;
+        }
+        
+        main .post form .agregaramigo {
+            border: none;
+            cursor: pointer;
+            /* padding: 10px 20px; */
+            border: none;
+            width: 30px;
+            background-color: transparent;
+        }
+        
+        main .post form .agregaramigo img {
+            border: none;
+        }
+        
+        main .publicaciones .botonperfilotro {
+            background-color: transparent;
+            border: none;
+        }
+        
+        main .publicaciones .botonperfilotro img {
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+        }
+        /* numero de solicitudes de amistad en el cabecero de paginas */
+        
+        .container nav .totalsolicitud {
+            color: rgb(5, 5, 5);
+            margin-left: 2px;
+            padding-left: 2px;
+            font-size: 18px;
+            border-radius: 100%;
+            background-color: rgb(49, 255, 8);
+            padding-top: 1px;
+            padding-right: 1px;
+            padding-left: 1px;
+            padding-bottom: 1px;
+        }
+        /* numero de chats se muestra en lateral izquierdo */
+        
+        main .contenedorizq nav .totalchat {
+            color: rgb(10, 10, 10);
+            margin-left: 2px;
+            padding-left: 2px;
+            font-size: 18px;
+            border-radius: 100%;
+            background-color: rgb(49, 255, 8);
+            padding-top: 1px;
+            padding-right: 1px;
+            padding-left: 1px;
+            padding-bottom: 1px;
+        }
+        
+        main .contenedorizq nav .totalchat span {
+            color: black;
+        }
+        
+        .sticky-top3 {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0px;
+            z-index: 1030;
+        }
+        /* chat */
+        
+        .contenedoramigoschat {
+            border-radius: 20px;
+            /* background-color: rgb(32, 43, 92); */
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url('../imagenes_pro/fondo.jpg');
+            background-repeat: repeat-y;
+            background-size: 100%;
+            background-attachment: fixed;
+            position: fixed;
+            /* opacity: 90%;*/
+            top: 80px;
+            padding: 10px;
+            left: 73%;
+            border-radius: 20px;
+            box-shadow: 2px 3px 20px rgba(0, 0, 0, 548);
+            border: solid 1px white;
+        }
+        
+        .contenedoramigoschat img {
+            box-shadow: 2px 3px 20px rgba(0, 0, 0, 548);
+        }
+        
+        .contenedoramigoschat::-webkit-scrollbar {
+            width: 3px;
+            height: 10px;
+        }
+        
+        .contenedoramigoschat ::-webkit-scrollbar-thumb {
+            background: rgba(0, 0, 0);
+        }
+        
+        #mensaje {
+            width: 250px;
+            border: rgb(107, 105, 105);
+            font-size: 16px;
+            color: white;
+            padding: 10px 10px;
+            height: 40px;
+            margin-left: 10px;
+            line-height: 25px;
+            border-radius: 3px 0 0 3px;
+            background-color: transparent
+        }
+        
+        #enviarchat {
+            width: 40px;
+            border: none;
+            font-size: 12px;
+            padding: 0 px;
+            height: 40px;
+            line-height: 25px;
+            border-radius: 3px 0 0 3px;
+            cursor: pointer;
+            /* background-color: rgb(252, 251, 251); */
+            background-color: transparent
+        }
+        
+        .btnborrachat {
+            width: 32px;
+            border: none;
+            padding: 0 px;
+            height: 30px;
+            line-height: 25px;
+            border-radius: 3px 0 0 3px;
+            cursor: pointer;
+            margin-left: 0px;
+            text-align: left;
+            margin-right: 0px;
+        }
+        
+        .btnborrachat {
+            background-color: transparent;
+        }
+        
+        .spanborrachat {
+            color: white;
+        }
+        
+        footer {
+            background-color: rgb(239, 241, 241);
+            margin-top: 20px;
+        }
+        
+        #footerchat {
+            background-color: transparent;
+        }
+        /*caja para enviar mensajes de chat*/
+        footer .footer {
+            margin-bottom: 20px;
+            /* border: 1px solid rgb(252, 5, 5); */
+            align-self: auto;
+            width: 350px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url('../imagenes_pro/fondo.jpg');
+            background-repeat: repeat-y;
+            background-size: 100%;
+            background-attachment: fixed;
+            opacity: 90%;
+            /* background-color: rgb(32, 43, 92); */
+            /* background-color: rgb(255, 255, 255); */
+            /*background-color: rgb(85, 17, 175);*/
+            border-radius: 15px;
+            border: solid 1px white;
+            /* padding: 20px; */
+            text-align: center;
+            padding-left: 10px;
+            box-shadow: 2px 3px 20px rgba(0, 0, 0, 548);
+        }
+        
+        #imagencajachat {
+            width: 40px;
+            border: none;
+            font-size: 12px;
+            padding: 0 px;
+            height: 40px;
+            line-height: 25px;
+            border-radius: 3px 0 0 3px;
+            cursor: pointer;
+            background-color: rgb(255, 255, 255);
+            margin-right: 0px;
+        }
+        /* mensaje de chat */
+        
+        .publicaciones .mensachat {
+            box-shadow: 2px 3px 20px rgba(0, 0, 0, 548);
+            border: solid 1px rgb(114, 170, 196);
+            border-radius: 20px;
+            /* border: 1px solid rgb(252, 5, 5); */
+            padding: 5px;
+            background-color: rgb(255, 255, 255);
+        }
+        
+        .publicaciones .imagenamigochat {
+            border-radius: 100%;
+            width: 30px;
+            height: 30px;
+            border: solid 1px white;
+        }
+        
+        .textochat {
+            padding: 5px;
+            font-size: 16px;
+            color: rgb(4, 12, 134);
+            margin-bottom: 5px;
+            background: rgb(255, 255, 255);
+            border-radius: 45px 45px 45px 45px;
+        }
+        
+        .sticky-top4 {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 300px;
+            z-index: 1030;
+        }
+        
+        .publicacioneschat {
+            border: 1px solid rgb(221, 218, 218);
+        }
+        
+        .imgamigochat {
+            width: 50px;
+            border: none;
+            font-size: 12px;
+            padding: 0 px;
+            height: 50px;
+            line-height: 25px;
+            border-radius: 100%;
+            cursor: pointer;
+            background-color: rgb(255, 255, 255);
+            margin-right: 0px;
+        }
+        
+        .hola {
+            height: 60px;
+        }
+        /* css para ocultar usuario en footer de chat  */
+        
+        #frm .h {
+            color: rgb(32, 43, 925);
+            border-color: rgb(32, 43, 925);
+            border-top: rgb(32, 43, 925);
+            width: 0px;
+            height: 0px;
+            opacity: 0;
+        }
+        /* boton stop de publicaciones */
+        /*main .publicaciones .post .caja-botones .btns {
+    cursor: pointer;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 3px;
+    border: none;
+    margin-left: 0px;
+    background-color: rgb(239, 241, 241);
+}*/
+        
+        main .publicaciones .post .caja-botones .numerost {
+            margin-right: 0px;
+            margin-top: 10px;
+            padding-right: 0px;
+        }
+        /* pagina  mis images */
+        
+        main .container .h1imagenes {
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+        
+        .misimg {
+            /* background-color: rgb(239, 241, 241); */
+            border-radius: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url('../imagenes_pro/fondo.jpg');
+            background-repeat: repeat-y;
+            background-size: 100%;
+            background-attachment: fixed;
+            border: 1px solid black;
+            /* box-shadow: 2px 3px 20px rgba(0, 0, 0, 548); */
+            padding: 10px;
+            margin-left: 20%;
+        }
+        
+        .hrmisimagenes {
+            size: 2px;
+            background-color: white;
+            width: 50%;
+        }
+        
+        .galeria {
+            width: 90%;
+            margin: auto;
+            list-style: none;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        
+        .galeria li {
+            margin: 5px;
+            border: solid white;
+            border-radius: 20px;
+            padding: 10px;
+        }
+        
+        .galeria .imagenimagenes {
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            /* box-shadow: 2px 3px 20px rgba(0, 0, 0, 548); */
+        }
+        
+        .galeria img:hover {
+            transform: scale(2.0);
+        }
+        
+        .galeria img {
+            transition: 1s;
+        }
+        
+        .imagenimagenesperfil {
+            width: 100px;
+        }
+         
+        
+        @media screen and (max-width:767px) {
+            main .btn-menu {
+                display: block;
+                border: solid rgb(2, 15, 59);
+                padding: 5px 10px;
+                font-size: 14px;
+                background-image: url('../imagenes_pro/fondo.jpg');
+                color: white;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+            .misimg {
+                margin-left: 0;
+            }
+            main .btn-menu:hover {
+                text-decoration: none;
+            }
+            main .fondo-enlace {
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                top: 0;
+                left: 0;
+                cursor: pointer;
+                background: rgba(0, 0, 0, .5);
+                z-index: 99;
+                display: none;
+            }
+            main .fondo-enlace.active {
+                display: block;
+            }
+            main .contenedorizq {
+                background: rgb(7, 7, 7);
+                border: solid 1px rgb(10, 20, 51);
+                width: 85%;
+                position: fixed;
+                left: 0;
+                top: 20;
+                z-index: 100;
+                opacity: 80%;
+                height: 100vh;
+                margin: 0;
+                padding: 0;
+                transform: translatex(-100%);
+                transition: all .3s ease;
+                overflow: scroll;
+                border-radius: 0;
+            }
+            main .contenedorizq nav {
+                border-bottom: none;
+                background: rgb(10, 10, 10);
+                
+            }
+            main .contenedorizq nav a {
+                padding: 20px;
+                color: rgb(7, 7, 7);
+            }
+            main .contenedorizq nav a:hover {
+                color: rgb(8, 8, 8);
+                background-color: white;
+            }
+            main .contenedorizq nav span:hover {
+                color: black;
+            }
+            main .contenedorizq.active {
+                transform: translateX(0%);
+            }
+
+
+            /*boton para los videos en dispositivos moviles */
+             main .btn-menuvideo{
+                display: block;
+                border: solid rgb(2, 15, 59);
+                padding: 5px 10px;
+                font-size: 14px;
+                background-image: url('../imagenes_pro/fondo.jpg');
+                color: white;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+            main .btn-menuvideo:hover {
+                text-decoration: none;
+            }
+             body .bodytusvideos{
+                background: rgb(10, 10, 10);
+            }
+              body .barraderechavideo {
+                background: rgb(8, 8, 8);
+                border: solid 1px rgb(10, 20, 51);
+                width: 100%;
+                position: fixed;
+                left: 0;
+                top: 40;
+                z-index: 100;
+                opacity: 80%;
+                height: 100vh;
+                margin:0;
+                padding: 0px;
+                transform: translatex(-400%);
+                transition: all .3s ease;
+                overflow: scroll;
+                border-radius: 0;
+                
+            }
+            #salirvideo{
+                display: initial;
+                color: lawngreen;
+            }
+            main .barraderechavideo .videoperfil {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                
+            }
+            main .barraderechavideo.active {
+                transform: translateX(0%);
+               /* transform: translateX(-72%);*/
+            }
+        }
