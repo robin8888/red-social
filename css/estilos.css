@@ -368,7 +368,22 @@
             min-width: 100%;
             max-width: 100%;
         }
-        /* datos que aparecen en pagina de perfil */
+        main .comentariospublicaciones .comentario form .divcomentario{
+            margin-top: 5px;
+        }
+        main .comentariospublicaciones  .comentario form  .divcomentario button{
+            background-image: url('../imagenes_pro/fondo.jpg');
+            color: white;
+            height: 30px;
+            border-radius: 10px;
+        }
+        .modal-content{
+            background-color: rgb(213, 238, 232);
+            border-radius: 20px;
+            /* opacity: 75%; */
+            color: rgb(254, 254, 255);
+        }
+        /* datos que aparecen en pagina de perfil----------------------------------------------------------------- */
         
         .datos {
             padding-top: 20px;
